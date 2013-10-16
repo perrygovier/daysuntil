@@ -15,14 +15,15 @@
 @implementation pgMainViewController
 
 @synthesize daysUntil;
+@synthesize myTimezone;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
-    
     NSString *end = @"2014-7-10";
-    
     NSDateFormatter *f = [[NSDateFormatter alloc] init];
     [f setDateFormat:@"yyyy-MM-dd"];
     NSDate *startDate = [NSDate date];
@@ -36,7 +37,12 @@
     
     self.daysUntil.text = [NSString stringWithFormat:@"%d",components.day];
     [UIApplication sharedApplication].applicationIconBadgeNumber = components.day;
+    
+    NSTimeZone *localTime = [NSTimeZone systemTimeZone];
+    self.myTimezone.text = localTime.abbreviation;
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
