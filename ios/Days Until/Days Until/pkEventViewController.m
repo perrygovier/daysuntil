@@ -13,6 +13,7 @@
 @end
 
 @implementation pkEventViewController
+@synthesize eventTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +29,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.eventTextField.delegate = self;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (IBAction)makeBadge:(id)sender{

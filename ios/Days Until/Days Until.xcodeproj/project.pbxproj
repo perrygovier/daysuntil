@@ -23,6 +23,8 @@
 		6EFA00DC180F53BC00526505 /* Days_UntilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA00DB180F53BC00526505 /* Days_UntilTests.m */; };
 		6EFA00E7180F53F700526505 /* pkHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA00E6180F53F700526505 /* pkHomeViewController.m */; };
 		6EFA00ED180F59B900526505 /* pkEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA00EC180F59B900526505 /* pkEventViewController.m */; };
+		C2E48D4F1812DFC800B5B1D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E48D4E1812DFC800B5B1D8 /* CoreData.framework */; };
+		C2E48D521812E0C100B5B1D8 /* Events.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2E48D501812E0C100B5B1D8 /* Events.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		6EFA00E6180F53F700526505 /* pkHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pkHomeViewController.m; sourceTree = "<group>"; };
 		6EFA00EB180F59B900526505 /* pkEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkEventViewController.h; sourceTree = "<group>"; };
 		6EFA00EC180F59B900526505 /* pkEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pkEventViewController.m; sourceTree = "<group>"; };
+		C2E48D4E1812DFC800B5B1D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C2E48D511812E0C100B5B1D8 /* Events.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Events.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E48D4F1812DFC800B5B1D8 /* CoreData.framework in Frameworks */,
 				6EFA00B0180F53BC00526505 /* CoreGraphics.framework in Frameworks */,
 				6EFA00B2180F53BC00526505 /* UIKit.framework in Frameworks */,
 				6EFA00AE180F53BB00526505 /* Foundation.framework in Frameworks */,
@@ -106,6 +111,7 @@
 		6EFA00AC180F53BB00526505 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2E48D4E1812DFC800B5B1D8 /* CoreData.framework */,
 				6EFA00AD180F53BB00526505 /* Foundation.framework */,
 				6EFA00AF180F53BC00526505 /* CoreGraphics.framework */,
 				6EFA00B1180F53BC00526505 /* UIKit.framework */,
@@ -122,6 +128,7 @@
 				6EFA00BF180F53BC00526505 /* Main_iPhone.storyboard */,
 				6EFA00C2180F53BC00526505 /* Main_iPad.storyboard */,
 				6EFA00C8180F53BC00526505 /* Images.xcassets */,
+				C2E48D501812E0C100B5B1D8 /* Events.xcdatamodeld */,
 				6EFA00B4180F53BC00526505 /* Supporting Files */,
 				6EFA00E5180F53F700526505 /* pkHomeViewController.h */,
 				6EFA00E6180F53F700526505 /* pkHomeViewController.m */,
@@ -263,6 +270,7 @@
 				6EFA00BE180F53BC00526505 /* pkAppDelegate.m in Sources */,
 				6EFA00ED180F59B900526505 /* pkEventViewController.m in Sources */,
 				6EFA00E7180F53F700526505 /* pkHomeViewController.m in Sources */,
+				C2E48D521812E0C100B5B1D8 /* Events.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +489,7 @@
 				6EFA00E1180F53BC00526505 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EFA00E2180F53BC00526505 /* Build configuration list for PBXNativeTarget "Days UntilTests" */ = {
 			isa = XCConfigurationList;
@@ -489,8 +498,22 @@
 				6EFA00E4180F53BC00526505 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2E48D501812E0C100B5B1D8 /* Events.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2E48D511812E0C100B5B1D8 /* Events.xcdatamodel */,
+			);
+			currentVersion = C2E48D511812E0C100B5B1D8 /* Events.xcdatamodel */;
+			path = Events.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6EFA00A2180F53BB00526505 /* Project object */;
 }
