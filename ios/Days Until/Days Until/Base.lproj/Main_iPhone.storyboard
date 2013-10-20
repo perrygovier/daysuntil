@@ -36,7 +36,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="BQr-06-rTn" kind="push" trigger="accessoryAction" id="KGV-Xw-MsF"/>
+                                    <segue destination="BQr-06-rTn" kind="push" identifier="existingItemTapped" trigger="accessoryAction" id="KGV-Xw-MsF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +48,7 @@
                     <navigationItem key="navigationItem" id="Kxs-tT-c8a">
                         <barButtonItem key="rightBarButtonItem" title="add" id="6cw-He-jgl">
                             <connections>
-                                <segue destination="BQr-06-rTn" kind="push" id="554-bW-9oW"/>
+                                <segue destination="BQr-06-rTn" kind="push" identifier="addButtonTapped" id="554-bW-9oW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -123,14 +123,21 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DXG-Ny-3Zd"/>
+                    <navigationItem key="navigationItem" id="DXG-Ny-3Zd">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="f2w-ad-ZK1">
+                            <connections>
+                                <segue destination="Szm-sf-fqB" kind="unwind" unwindAction="done:" id="jqP-Ss-jES"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="eventDate" destination="xFi-KO-jFl" id="7Cb-EL-VUG"/>
+                        <outlet property="eventDateField" destination="xFi-KO-jFl" id="7ht-TE-G0u"/>
                         <outlet property="eventTextField" destination="2Ig-GM-fPL" id="IyK-AV-3uC"/>
                         <outlet property="makeBadge" destination="51W-Uz-T6g" id="uF0-Mg-UvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcw-hW-zzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Szm-sf-fqB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="358" y="41"/>
         </scene>

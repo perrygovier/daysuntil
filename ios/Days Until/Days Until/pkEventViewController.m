@@ -14,6 +14,7 @@
 
 @implementation pkEventViewController
 @synthesize eventTextField;
+@synthesize eventDateField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,9 +38,14 @@
 }
 
 - (IBAction)makeBadge:(id)sender{
+    //convert data picker val to string
+    NSDateFormatter *newFormatter = [[NSDateFormatter alloc] init];
+    [newFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [newFormatter setTimeStyle:NSDateFormatterNoStyle];
+    NSString *eventDate = [newFormatter stringFromDate:eventDateField.date];
     NSString *eventName = self.eventTextField.text;
     
-    NSLog(@"%@", eventName);
+    NSLog(@"Make Badge for - Name: %@ Date: %@", eventName,eventDate);
 }
 - (void)didReceiveMemoryWarning
 {

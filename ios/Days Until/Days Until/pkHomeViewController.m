@@ -34,6 +34,18 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Going to detail view. TODO: preload data on the next page if the right segue");
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+}
+- (IBAction)done:(UIStoryboardSegue *)segue {
+    //UIViewController* sourceViewController = segue.sourceViewController;
+    pkHomeViewController *source = [segue sourceViewController];
+    // do something with source
+    //NSLog(@"Saving %@",[self eventName]);
+    NSLog(@"Done with the detail view");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
