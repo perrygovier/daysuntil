@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pkEventViewController : UIViewController <UITextFieldDelegate>{
-    //IBOutlet UITextField  *eventTextField;
-    
-}
+@interface pkEventViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *eventTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *eventDateField;
 @property (weak, nonatomic) NSString  *testVar;

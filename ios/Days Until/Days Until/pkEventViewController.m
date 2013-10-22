@@ -38,10 +38,6 @@
     return NO;
 }
 
--(void)setEventData:(NSString*)textField{
-    self.eventTextField.text =_testVar;
-}
-
 - (IBAction)makeBadge:(id)sender{
     //convert data picker val to string
     NSDateFormatter *newFormatter = [[NSDateFormatter alloc] init];

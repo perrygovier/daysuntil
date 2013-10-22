@@ -40,11 +40,9 @@
     NSLog(@"Going to detail view. TODO: preload data on the next page if the right segue");
     // note, vars passed to this method are visible to the next view controller
     
+    // should be the editbuttontapped
     if([[segue identifier] isEqualToString:@"addButtonTapped"]){
-        pkEventViewController* svc =segue.destinationViewController;
-        svc.testVar = @"hi there";
-        //[svc setEventData: @"Passing data in" ];
-        //[[svc eventTextField] setText: @"Passing data in" ];
+        [segue.destinationViewController setTestVar:@"this should be the title of the tapped event"];
     }
     
     NSLog(@"prepareForSegue: %@", segue.identifier);
