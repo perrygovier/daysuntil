@@ -31,10 +31,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.eventTextField.delegate = self;
+    self.eventTextField.text = self.testVar;
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
+}
+
+-(void)setEventData:(NSString*)textField{
+    self.eventTextField.text =_testVar;
 }
 
 - (IBAction)makeBadge:(id)sender{
@@ -46,6 +51,16 @@
     NSString *eventName = self.eventTextField.text;
     
     NSLog(@"Make Badge for - Name: %@ Date: %@", eventName,eventDate);
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Going to main view. TODO: save data to coreData");
+    NSDateFormatter *newFormatter = [[NSDateFormatter alloc] init];
+    [newFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [newFormatter setTimeStyle:NSDateFormatterNoStyle];
+    NSString *eventDate = [newFormatter stringFromDate:eventDateField.date];
+    NSString *eventName = self.eventTextField.text;
+    NSLog(@"Need to save - Name: %@ Date: %@", eventName,eventDate);
 }
 - (void)didReceiveMemoryWarning
 {

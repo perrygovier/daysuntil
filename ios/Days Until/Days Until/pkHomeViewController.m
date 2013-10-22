@@ -7,6 +7,7 @@
 //
 
 #import "pkHomeViewController.h"
+#import "pkEventViewController.h"
 
 @interface pkHomeViewController ()
 
@@ -37,13 +38,18 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSLog(@"Going to detail view. TODO: preload data on the next page if the right segue");
+    // note, vars passed to this method are visible to the next view controller
+    
+    if([[segue identifier] isEqualToString:@"addButtonTapped"]){
+        pkEventViewController* svc =segue.destinationViewController;
+        svc.testVar = @"hi there";
+        //[svc setEventData: @"Passing data in" ];
+        //[[svc eventTextField] setText: @"Passing data in" ];
+    }
+    
     NSLog(@"prepareForSegue: %@", segue.identifier);
 }
 - (IBAction)done:(UIStoryboardSegue *)segue {
-    //UIViewController* sourceViewController = segue.sourceViewController;
-    pkHomeViewController *source = [segue sourceViewController];
-    // do something with source
-    //NSLog(@"Saving %@",[self eventName]);
     NSLog(@"Done with the detail view");
 }
 - (void)didReceiveMemoryWarning

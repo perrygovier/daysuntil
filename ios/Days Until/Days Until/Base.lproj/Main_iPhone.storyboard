@@ -132,7 +132,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="eventDateField" destination="xFi-KO-jFl" id="7ht-TE-G0u"/>
-                        <outlet property="eventTextField" destination="2Ig-GM-fPL" id="IyK-AV-3uC"/>
+                        <outlet property="eventTextField" destination="2Ig-GM-fPL" id="aGc-sy-EcJ"/>
                         <outlet property="makeBadge" destination="51W-Uz-T6g" id="uF0-Mg-UvL"/>
                     </connections>
                 </viewController>
